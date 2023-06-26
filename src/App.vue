@@ -3,8 +3,14 @@
   import { store } from './data/store.js';
   import axios from 'axios';
 
+  import ProjectCard from './components/ProjectCard.vue';
+
   export default {
     name: 'Home',
+
+    components: {
+      ProjectCard
+    },
 
     data(){
       return{
@@ -22,10 +28,10 @@
               });
       },
 
-      formatData(dateString){
-        const d = new Date(dateString);
-        return d.toLocaleDateString()
-      }
+      // formatData(dateString){
+      //   const d = new Date(dateString);
+      //   return d.toLocaleDateString()
+      // }
     },
 
     mounted(){
@@ -43,7 +49,16 @@
     
       <h1 class="mb-3">Elenco Progetti</h1>
 
-      <table class="table table-striped table-dark">
+      <div class="cards-container d-flex flex-wrap justify-content-between">
+
+        <ProjectCard
+          v-for="project in projects"
+          :key="project.id" 
+          :project="project"/>
+
+      </div>
+
+      <!-- <table class="table table-striped table-dark">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -68,7 +83,7 @@
 
           </tr>
         </tbody>
-      </table>
+      </table> -->
 
     </div>
 
