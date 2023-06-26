@@ -19,8 +19,12 @@
               .then(results => {
                 this.projects = results.data;
                 console.log(this.projects)
-              })
-        ;
+              });
+      },
+
+      formatData(dateString){
+        const d = new Date(dateString);
+        return d.toLocaleDateString()
       }
     },
 
@@ -35,9 +39,36 @@
 
   <div class="main-wrapper bg-dark text-white">
 
-    <div class="container">
+    <div class="container py-5">
     
-      <h1>Home</h1>
+      <h1 class="mb-3">Elenco Progetti</h1>
+
+      <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Tecnologia</th>
+            <th scope="col">Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            v-for="project in projects"
+            :key="project.id">
+
+            <th scope="row">{{ project.id }}</th>
+            <td>{{ project.name }}</td>
+            <td>--tipo--</td>
+            <td>{{ project.category }}</td>
+            <td>--tecnologia--</td>
+            <td>{{ formatData(project.date_creation) }}</td>
+
+          </tr>
+        </tbody>
+      </table>
 
     </div>
 
