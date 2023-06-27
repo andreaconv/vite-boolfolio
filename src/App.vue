@@ -15,6 +15,8 @@
 
 <template>
 
+  <!-- TODO: Aggiungete un elenco di  bottoni per i tipi  e le tecnologie, Questi bottoni verranno stampati a seguito di chiamate axios dedicate. -->
+
   <div class="body bg-dark text-white">
 
     <MyHeader />
