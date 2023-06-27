@@ -67,3 +67,14 @@ import { createApp } from "vue";
 import App from './App.vue';
 createApp(App).mount('#app');
 ```
+
+## CONSEGNA 2
+
+Oggi continuate sulle stesse repo di ieri. <br>
+Aggiungete il router a Vue e inserite  un menu di navigazione fra le pagine. <br>
+Solo una delle pagine farà la chiamata axios per stampare il portfolio.<br>
+Aggiungete un elenco di  bottoni per i tipi  e le tecnologie, Questi bottoni verranno stampati a seguito di chiamate axios dedicate.
+
+>BONUS
+
+al click di un bottone per il tipo o  tecnologie, nell’elenco dei progetti appariranno solo quelli di quel tipo o di quella tecnologia

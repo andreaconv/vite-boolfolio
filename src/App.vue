@@ -43,6 +43,9 @@
 
 <template>
 
+<!-- TODO: -->
+<!-- 1. Gestire la paginazione dei risultati -->
+
   <div class="main-wrapper bg-dark text-white">
 
     <div class="container py-5">
