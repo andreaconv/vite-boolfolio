@@ -42,9 +42,9 @@ export default {
 <!-- TODO: -->
 <!-- 1. Gestire la paginazione dei risultati -->
 
-<div class="main-wrapper bg-dark text-white">
+<div class="main-wrapper">
 
-  <div class="container py-5">
+  <div class="container">
   
     <h1 class="mb-3">Elenco Progetti</h1>
 
@@ -91,9 +91,5 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
-.main-wrapper{
-min-height: 100vh;
-}
 
 </style>

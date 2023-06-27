@@ -6,7 +6,13 @@
   </script>
 
 <template>
-  <h1>Home</h1>
+
+  <div class="container">
+
+    <h1>Home</h1>
+
+  </div>
+  
 </template>
 
 <style>
