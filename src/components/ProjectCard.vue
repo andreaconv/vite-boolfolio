@@ -28,6 +28,13 @@
         } 
         this.color = this.project.type.color
         return this.project.type.name
+      },
+
+      technologies(){
+        if(!this.project.technologies[0]){
+          return ' - no technologies - '
+        } 
+        return this.project.technologies[0].name
         },
 
       }
@@ -43,7 +50,7 @@
     <h5 class="card-title">Titolo: <span class="title">{{ project.name }}</span></h5>
     <h6 class="card-title">Tipo: <span :class="'badge text-bg-' + this.color">{{ type }}</span></h6>
     <p class="card-text">Categoria: {{ project.category }}</p>
-    <h6 class="card-title">Tecnologia: ---</h6>
+    <h6 class="card-title">Tecnologia: <span class="badge text-bg-light">{{ technologies }}</span></h6>
     <p class="card-text">{{ formatData(project.date_creation) }}</p>
   </div>
 </div>
